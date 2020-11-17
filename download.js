@@ -25,7 +25,7 @@ module.exports.download = (url, cb) => {
     adjustExtensions: "--adjust-extension" + SPACE
   };
   const tempName = shortid.generate();
-  const internFilepath = process.env.TEMP_DOWNLOAD_PATH + tempName;
+  const internFilepath = tempName;
 
   const options =
     o.output(internFilepath) +

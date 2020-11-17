@@ -3,7 +3,7 @@ const simpleGitPromise = require("simple-git/promise")();
 const gitHubUrl = `https://${process.env.GITHUB_USER}:${process.env.GITHUB_PASSWORD}@github.com/${process.env.GITHUB_USER}/${process.env.GITHUB_REPO}`;
 
 module.exports.uploadToGithub = function(foldername, cb) {
-  simpleGitPromise.add(process.env.TEMP_DOWNLOAD_PATH + foldername).then(
+  simpleGitPromise.add(foldername).then(
     addSuccess => {
       console.log(addSuccess);
     },
@@ -18,6 +18,7 @@ module.exports.uploadToGithub = function(foldername, cb) {
       console.log(successCommit);
     },
     failed => {
+      console.log(failed)
       console.log("failed commmit");
     }
   );

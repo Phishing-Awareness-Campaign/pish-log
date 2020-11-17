@@ -32,7 +32,7 @@ app.post("/", (req, res) => {
 });
 
 function removeDir(dir, cb) {
-  fs.rmdir(dir, { recursive: true }, err => {
+  fs.rmdir(dir, err => {
     if (err) {
       throw err;
     }
