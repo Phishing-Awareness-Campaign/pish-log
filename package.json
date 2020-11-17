@@ -10,7 +10,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "shortid": "^2.2.16",
+    "simple-git": "^2.21.0",
+    "body-parser": "^1.19.0"
   },
   "engines": {
     "node": "12.x"
